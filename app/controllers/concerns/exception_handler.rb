@@ -11,8 +11,8 @@ module ExceptionHandler
   included do
     # Define custom handlers
     rescue_from ExceptionHandler::AuthenticationError, with: :unauthorized_request
-    rescue_from ExceptionHandler::MissingToken, with: :unprocessable_entity
-    rescue_from ExceptionHandler::InvalidToken, with: :unprocessable_entity
+    rescue_from ExceptionHandler::MissingToken, with: :unauthorized_request
+    rescue_from ExceptionHandler::InvalidToken, with: :unauthorized_request
     rescue_from ExceptionHandler::ExpiredSignature, with: :unauthorized_request
     rescue_from ExceptionHandler::DecodeError, with: :unauthorized_request
 

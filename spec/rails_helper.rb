@@ -32,7 +32,8 @@ rescue ActiveRecord::PendingMigrationError => e
   exit 1
 end
 RSpec.configure do |config|
-  config.include RequestSpecHelper, type: :request
+  config.include RequestSpecHelper
+  config.include ControllerSpecHelper
   config.include FactoryBot::Syntax::Methods
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
