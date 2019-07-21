@@ -4,6 +4,9 @@
       "scripts": {
         "test": "rspec"
       }
-    }
+    },
+    "addons":[
+      "heroku-postgresql"
+    ]
   }
 }
