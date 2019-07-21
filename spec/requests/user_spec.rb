@@ -13,4 +13,33 @@ RSpec.describe 'Phonebook API', type: :request do
       expect(response).to have_http_status(401)
     end
   end
+
+  describe 'POST /users' do
+    let(:valid_attributes) { { first_name: 'alex', last_name: 'alex', email: 'alex@mail.com', password: 'passs', } }
+
+    context 'when the request is valid' do
+      before { post '/users', params: valid_attributes }
+
+      it 'creates a user' do
+        expect(json['message']).to eql('User was successfully created.')
+      end
+
+      it 'returns status code 201' do
+        expect(response).to have_http_status(201)
+      end
+    end
+
+    context 'when the request is invalid' do
+      before { post '/users', params: { } }
+
+      it 'returns status code 422' do
+        expect(response).to have_http_status(422)
+      end
+
+      it 'returns a validation failure message' do
+        expect(response.body)
+          .to match('')
+      end
+    end
+  end
 end
