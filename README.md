@@ -1,7 +1,7 @@
 # The Ruby Phonebook
-
 A Ruby on Rails api-only app with JWT token authentication that exposes a basic CRUD API for managing contacts in a phonebook.
 
+[Live demo](https://sheltered-chamber-62543.herokuapp.com)
 #### How to register a user
 
 In order to create a new user just call `POST /users` with the mandatory fields, first_name, last_name, email, password.
@@ -42,8 +42,6 @@ In order to run the test suite just run `bundle exec spec`
 #### Starting the app
 You can start the application server called 'Puma' by  running `rails s` in your terminal and stop it by hitting `CTRL + c`.
 After making any changes to configuration the server has to be restarted for the changes to take effect. 
-
-#### Deployment instructions
 
 #### Improvements
 
