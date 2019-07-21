@@ -30,7 +30,7 @@ it is also depending on postgreSQL to be installed on the host machine.
 Run `bundle install` to install all the gems listed in the Gemfile.
 
 #### Database
-  * A visual representation of the database is available under the `schema.xml` file just navigate 
+A visual representation of the database is available under the `schema.xml` file just navigate 
   to this [URL](https://ondras.zarovi.cz/sql/demo/) and paste the contents of the file in the load window.
 
 Make sure that the database credentials listed in `config/database.yml` match the ones for the local database user.  
@@ -44,7 +44,6 @@ You can start the application server called 'Puma' by  running `rails s` in your
 After making any changes to configuration the server has to be restarted for the changes to take effect. 
 
 #### Improvements
-
 * validate phone numbers with [telephone_number](https://rubygems.org/gems/telephone_number)
 * Add search endpoint in the contacts API
 * Introduce permission groups so only admin level users can manage other users
