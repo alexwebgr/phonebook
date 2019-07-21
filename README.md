@@ -1,7 +1,7 @@
 # The Ruby Phonebook
 A Ruby on Rails api-only app with JWT token authentication that exposes a basic CRUD API for managing contacts in a phonebook.
 
-[Live demo](https://sheltered-chamber-62543.herokuapp.com)
+[Hosted in Heroku](https://sheltered-chamber-62543.herokuapp.com)
 #### How to register a user
 
 In order to create a new user just call `POST /users` with the mandatory fields, first_name, last_name, email, password.
