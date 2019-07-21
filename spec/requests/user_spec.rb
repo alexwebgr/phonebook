@@ -37,8 +37,8 @@ RSpec.describe 'Phonebook API', type: :request do
       end
 
       it 'returns a validation failure message' do
-        expect(response.body)
-          .to match('')
+        expect(json)
+          .to eql( ["First name can't be blank", "Last name can't be blank", "Email can't be blank", "Password digest can't be blank", "Password can't be blank"])
       end
     end
   end
