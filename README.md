@@ -47,3 +47,4 @@ After making any changes to configuration the server has to be restarted for the
 * validate phone numbers with [telephone_number](https://rubygems.org/gems/telephone_number)
 * Add search endpoint in the contacts API
 * Introduce permission groups so only admin level users can manage other users
+
